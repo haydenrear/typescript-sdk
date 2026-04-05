@@ -97,7 +97,7 @@ export type ProtocolOptions = {
 /**
  * The default request timeout, in milliseconds.
  */
-export const DEFAULT_REQUEST_TIMEOUT_MSEC = 60_000;
+export const DEFAULT_REQUEST_TIMEOUT_MSEC = parseInt(process.env.DEFAULT_REQUEST_TIMEOUT_MSEC ?? '', 10) || 60_000;
 
 /**
  * Options that can be given per request.
